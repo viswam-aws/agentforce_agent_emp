@@ -2,216 +2,65 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>YourBrand — Simple & Stylish</title>
-  <meta name="description" content="A very simple, stylish one‑page website template." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sample Website Page</title>
   <style>
-    :root {
-      --bg: #0f1226;
-      --bg2: #0b0d1c;
-      --text: #eef2ff;
-      --muted: #a1a8c3;
-      --accent: #6366f1;
-      /* change this to your brand color */
-      --card: rgba(255, 255, 255, 0.06);
-      --border: rgba(255, 255, 255, 0.12);
-      --radius: 16px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      height: 100%;
-    }
-
     body {
       margin: 0;
-      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(1200px 600px at 20% -10%, rgba(99, 102, 241, .25), transparent),
-        linear-gradient(180deg, #0b0d1c, #0f1226);
-      line-height: 1.6;
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      color: #333;
     }
 
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 24px;
-    }
-
-    /* Header / Nav */
     header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      backdrop-filter: saturate(180%) blur(12px);
-      background: rgba(15, 18, 38, .7);
-      border-bottom: 1px solid var(--border);
+      background: #4CAF50;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
     }
 
-    .nav {
+    nav {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-weight: 800;
-      letter-spacing: .5px;
+      justify-content: center;
+      background: #333;
     }
 
     nav a {
-      color: var(--muted);
+      color: white;
+      padding: 14px 20px;
       text-decoration: none;
-      margin: 0 12px;
-      padding: 10px 8px;
-      border-radius: 10px;
     }
 
     nav a:hover {
-      color: var(--text);
-      background: var(--card);
+      background: #575757;
     }
 
-    /* Buttons */
-    .btn {
-      display: inline-block;
-      background: var(--accent);
-      color: white;
-      padding: 12px 18px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 600;
-      box-shadow: 0 8px 20px rgba(99, 102, 241, .35);
-      transition: transform .15s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-    }
-
-    .btn.ghost {
-      background: transparent;
-      border: 1px solid var(--border);
-      color: var(--text);
-      box-shadow: none;
-    }
-
-    /* Hero */
-    .hero {
-      padding: 80px 24px 56px;
-    }
-
-    .hero h1 {
-      font-size: clamp(32px, 4vw, 56px);
-      line-height: 1.1;
-      margin: 0 0 16px;
-    }
-
-    .sub {
-      color: var(--muted);
-      max-width: 720px;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(255, 255, 255, .04);
-      color: var(--muted);
-      font-size: 12px
-    }
-
-    .actions {
-      margin-top: 28px;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    /* Sections */
-    .section {
-      padding: 40px 24px;
-    }
-
-    .section h2 {
-      margin: 0 0 14px;
-      font-size: clamp(22px, 2.6vw, 32px)
-    }
-
-    /* Cards / Grid */
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
+    .container {
       padding: 20px;
+      max-width: 900px;
+      margin: auto;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-    /* Contact Form */
-    input,
-    textarea {
-      width: 100%;
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 12px;
-      color: var(--text);
-    }
-
-    label {
-      font-size: 14px;
-      color: var(--muted)
-    }
-
-    form .row {
-      display: grid;
-      gap: 12px;
-      grid-template-columns: repeat(2, 1fr)
-    }
-
-    /* Footer */
     footer {
-      margin-top: 60px;
-      padding: 30px 24px;
-      border-top: 1px solid var(--border);
-      color: var(--muted)
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
     }
 
-    .small {
-      font-size: 14px;
-    }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      .grid {
-        grid-template-columns: repeat(2, 1fr)
-      }
-    }
-
-    @media (max-width: 640px) {
-      .grid {
-        grid-template-columns: 1fr
-      }
-
-      .hero {
-        padding-top: 56px
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
       }
     }
   </style>
@@ -219,89 +68,42 @@
 
 <body>
   <header>
-    <div class="container nav">
-      <div class="logo">YourBrand</div>
-      <nav>
-        <a href="#features">Features</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a class="btn" href="#get-started">Get Started</a>
-      </nav>
-    </div>
+    <h1>Welcome to My Sample Website New_Agent_v5</h1>
+    <p>A simple responsive HTML & CSS webpage</p>
   </header>
 
-  <main class="container">
-    <!-- HERO -->
-    <section class="hero" id="get-started">
-      <span class="badge">✨ Simple • Stylish • Fast</span>
-      <h1>Build a clean website in minutes</h1>
-      <p class="sub">A minimal, modern one‑page template you can copy‑paste and customize. Works everywhere, looks
-        great, and loads fast.</p>
-      <div class="actions">
-        <a class="btn" href="#features">See Features</a>
-        <a class="btn ghost" href="#contact">Contact Us</a>
-      </div>
-    </section>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
 
-    <!-- FEATURES -->
-    <section id="features" class="section">
-      <h2>Features</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Responsive</h3>
-          <p class="small">Looks great on phones, tablets, and desktops with zero setup.</p>
-        </div>
-        <div class="card">
-          <h3>Lightweight</h3>
-          <p class="small">Pure HTML + CSS. No frameworks required.</p>
-        </div>
-        <div class="card">
-          <h3>Customizable</h3>
-          <p class="small">Change colors, text, and sections with simple edits.</p>
-        </div>
-      </div>
-    </section>
+  <div class="container">
+    <div class="card">
+      <h2>About Us</h2>
+      <p>This is a sample section where you can describe your website, company, or personal profile. You can customize
+        it as per your needs.</p>
+    </div>
 
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <h2>About</h2>
-      <div class="card">
-        <p>Use this template as a landing page or a starter for a larger site. Replace <strong>YourBrand</strong> with
-          your name or logo and you're live.</p>
-      </div>
-    </section>
+    <div class="card">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Web Development</li>
+        <li>AI & Chatbot Solutions</li>
+        <li>Cloud Consulting</li>
+      </ul>
+    </div>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section">
+    <div class="card">
       <h2>Contact</h2>
-      <div class="card">
-        <form>
-          <div class="row">
-            <div>
-              <label for="name">Name</label>
-              <input id="name" placeholder="Your name" />
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input id="email" type="email" placeholder="you@example.com" />
-            </div>
-          </div>
-          <div style="margin-top:12px">
-            <label for="msg">Message</label>
-            <textarea id="msg" rows="4" placeholder="Say hello..."></textarea>
-          </div>
-          <div style="margin-top:16px">
-            <button class="btn" type="button">Send</button>
-          </div>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="container">
-    <div>© <span id="year"></span> YourBrand — All rights reserved.</div>
+      <p>Email: example@email.com</p>
+      <p>Phone: +91 98765 43210</p>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2025 My Sample Website. All Rights Reserved.</p>
   </footer>
-
   <script type='text/javascript'>
     function initEmbeddedMessaging() {
       try {
@@ -324,11 +126,6 @@
     src='https://ddl00000a7t9xuaq-dev-ed.develop.my.site.com/ESWGithubMessagingSetti1755491512401/assets/js/bootstrap.min.js'
     onload='initEmbeddedMessaging()'></script>
 
-
-  <script>
-    // auto year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 
 </html>
