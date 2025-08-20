@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -14,65 +15,208 @@
       --bg2: #0b0d1c;
       --text: #eef2ff;
       --muted: #a1a8c3;
-      --accent: #6366f1; /* change this to your brand color */
+      --accent: #6366f1;
+      /* change this to your brand color */
       --card: rgba(255, 255, 255, 0.06);
       --border: rgba(255, 255, 255, 0.12);
       --radius: 16px;
     }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
     body {
       margin: 0;
       font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color: var(--text);
       background:
-        radial-gradient(1200px 600px at 20% -10%, rgba(99,102,241,.25), transparent),
+        radial-gradient(1200px 600px at 20% -10%, rgba(99, 102, 241, .25), transparent),
         linear-gradient(180deg, #0b0d1c, #0f1226);
       line-height: 1.6;
     }
-    .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px;
+    }
 
     /* Header / Nav */
-    header { position: sticky; top: 0; z-index: 10; backdrop-filter: saturate(180%) blur(12px); background: rgba(15,18,38,.7); border-bottom: 1px solid var(--border); }
-    .nav { display: flex; align-items: center; justify-content: space-between; }
-    .logo { font-weight: 800; letter-spacing: .5px; }
-    nav a { color: var(--muted); text-decoration: none; margin: 0 12px; padding: 10px 8px; border-radius: 10px; }
-    nav a:hover { color: var(--text); background: var(--card); }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: saturate(180%) blur(12px);
+      background: rgba(15, 18, 38, .7);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: .5px;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin: 0 12px;
+      padding: 10px 8px;
+      border-radius: 10px;
+    }
+
+    nav a:hover {
+      color: var(--text);
+      background: var(--card);
+    }
 
     /* Buttons */
-    .btn { display: inline-block; background: var(--accent); color: white; padding: 12px 18px; border-radius: 12px; text-decoration: none; font-weight: 600; box-shadow: 0 8px 20px rgba(99,102,241,.35); transition: transform .15s ease; }
-    .btn:hover { transform: translateY(-1px); }
-    .btn.ghost { background: transparent; border: 1px solid var(--border); color: var(--text); box-shadow:none; }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 12px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 8px 20px rgba(99, 102, 241, .35);
+      transition: transform .15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn.ghost {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+      box-shadow: none;
+    }
 
     /* Hero */
-    .hero { padding: 80px 24px 56px; }
-    .hero h1 { font-size: clamp(32px, 4vw, 56px); line-height: 1.1; margin: 0 0 16px; }
-    .sub { color: var(--muted); max-width: 720px; }
-    .badge { display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; border:1px solid var(--border); background: rgba(255,255,255,.04); color: var(--muted); font-size: 12px }
-    .actions { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero {
+      padding: 80px 24px 56px;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 4vw, 56px);
+      line-height: 1.1;
+      margin: 0 0 16px;
+    }
+
+    .sub {
+      color: var(--muted);
+      max-width: 720px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, .04);
+      color: var(--muted);
+      font-size: 12px
+    }
+
+    .actions {
+      margin-top: 28px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
 
     /* Sections */
-    .section { padding: 40px 24px; }
-    .section h2 { margin: 0 0 14px; font-size: clamp(22px, 2.6vw, 32px) }
+    .section {
+      padding: 40px 24px;
+    }
+
+    .section h2 {
+      margin: 0 0 14px;
+      font-size: clamp(22px, 2.6vw, 32px)
+    }
 
     /* Cards / Grid */
-    .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
-    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
 
     /* Contact Form */
-    input, textarea { width: 100%; background: var(--bg2); border:1px solid var(--border); border-radius: 12px; padding: 12px; color: var(--text); }
-    label { font-size: 14px; color: var(--muted) }
-    form .row { display:grid; gap:12px; grid-template-columns: repeat(2,1fr) }
+    input,
+    textarea {
+      width: 100%;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+      color: var(--text);
+    }
+
+    label {
+      font-size: 14px;
+      color: var(--muted)
+    }
+
+    form .row {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(2, 1fr)
+    }
 
     /* Footer */
-    footer { margin-top: 60px; padding: 30px 24px; border-top: 1px solid var(--border); color: var(--muted) }
-    .small { font-size: 14px; }
+    footer {
+      margin-top: 60px;
+      padding: 30px 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted)
+    }
+
+    .small {
+      font-size: 14px;
+    }
 
     /* Responsive */
-    @media (max-width: 900px){ .grid { grid-template-columns: repeat(2, 1fr) } }
-    @media (max-width: 640px){ .grid { grid-template-columns: 1fr } .hero { padding-top: 56px } }
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    @media (max-width: 640px) {
+      .grid {
+        grid-template-columns: 1fr
+      }
+
+      .hero {
+        padding-top: 56px
+      }
+    }
   </style>
 </head>
+
 <body>
   <header>
     <div class="container nav">
@@ -91,7 +235,8 @@
     <section class="hero" id="get-started">
       <span class="badge">✨ Simple • Stylish • Fast</span>
       <h1>Build a clean website in minutes</h1>
-      <p class="sub">A minimal, modern one‑page template you can copy‑paste and customize. Works everywhere, looks great, and loads fast.</p>
+      <p class="sub">A minimal, modern one‑page template you can copy‑paste and customize. Works everywhere, looks
+        great, and loads fast.</p>
       <div class="actions">
         <a class="btn" href="#features">See Features</a>
         <a class="btn ghost" href="#contact">Contact Us</a>
@@ -121,7 +266,8 @@
     <section id="about" class="section">
       <h2>About</h2>
       <div class="card">
-        <p>Use this template as a landing page or a starter for a larger site. Replace <strong>YourBrand</strong> with your name or logo and you're live.</p>
+        <p>Use this template as a landing page or a starter for a larger site. Replace <strong>YourBrand</strong> with
+          your name or logo and you're live.</p>
       </div>
     </section>
 
@@ -157,24 +303,26 @@
   </footer>
 
   <script type='text/javascript'>
-	function initEmbeddedMessaging() {
-		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+    function initEmbeddedMessaging() {
+      try {
+        embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
-			embeddedservice_bootstrap.init(
-				'00DdL00000a7t9X',
-				'Github_Messaging_Setting',
-				'https://ddl00000a7t9xuaq-dev-ed.develop.my.site.com/ESWGithubMessagingSetti1755491512401',
-				{
-					scrt2URL: 'https://ddl00000a7t9xuaq-dev-ed.develop.my.salesforce-scrt.com'
-				}
-			);
-		} catch (err) {
-			console.error('Error loading Embedded Messaging: ', err);
-		}
-	};
-</script>
-<script type='text/javascript' src='https://ddl00000a7t9xuaq-dev-ed.develop.my.site.com/ESWGithubMessagingSetti1755491512401/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+        embeddedservice_bootstrap.init(
+          '00DdL00000a7t9X',
+          'Github_Messaging_Setting',
+          'https://ddl00000a7t9xuaq-dev-ed.develop.my.site.com/ESWGithubMessagingSetti1755491512401',
+          {
+            scrt2URL: 'https://ddl00000a7t9xuaq-dev-ed.develop.my.salesforce-scrt.com'
+          }
+        );
+      } catch (err) {
+        console.error('Error loading Embedded Messaging: ', err);
+      }
+    };
+  </script>
+  <script type='text/javascript'
+    src='https://ddl00000a7t9xuaq-dev-ed.develop.my.site.com/ESWGithubMessagingSetti1755491512401/assets/js/bootstrap.min.js'
+    onload='initEmbeddedMessaging()'></script>
 
 
   <script>
@@ -182,4 +330,5 @@
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
+
 </html>
